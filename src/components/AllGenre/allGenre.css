@@ -1,0 +1,55 @@
+.all-genre{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.body-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.body-dummy{
+    min-height: 100vh;
+    /* padding-left: 180px;
+    padding-right: 180px; */
+}
+
+/* .body-all-songs{
+    min-height: 100vh;
+    padding-left: 90px;
+    padding-right: 90px;
+    background-color:#F5F5F5;
+    display: flex;
+    justify-content: center;
+} */
+
+@media only screen and (min-width: 651px) {  
+    .body-all-songs { 
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+@media only screen and (max-width: 650px) {  
+    .body-all-songs { 
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.body-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-songs-text{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.grid-icon{
+    cursor: pointer;
+    width: 37px;
+}

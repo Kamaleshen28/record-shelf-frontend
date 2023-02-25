@@ -1,0 +1,77 @@
+
+.card{
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(0.1, 0.1, 0.1, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.light-card{
+    background-color: #DFDFDF;
+}
+
+.dark-card{
+    background-color: #ABABAB;
+}
+
+@media only screen and (min-width: 530px) {  
+    .card { 
+        width: 180px;
+    }
+  }
+@media only screen and (max-width: 529px) {  
+    .card { 
+        width:240px;
+    }
+  }
+
+.card-image{
+    width: 110px;
+    border-radius: 50%;
+}
+
+.details-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.song-name-text{
+    font-size: 20px;
+    font-weight: lighter;
+    color: black;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    justify-content: flex-start;
+    text-align: left;
+
+}
+
+.song-genre-text{
+    font-weight: bold;
+    font-size: 14px;
+}
+.heart-image-container{
+    position: relative;
+}
+.count-text{
+    position: absolute;
+    right: 0;
+    left:0;
+    top:7px;
+    cursor: pointer;
+}
+.heart-image{
+    cursor: pointer;
+}

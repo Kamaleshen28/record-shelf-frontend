@@ -1,0 +1,36 @@
+
+.genre-all-song-container{
+    display: flex;
+    flex-direction: column;
+    gap:35px
+}
+
+.genre-title-container{
+    display: flex;
+    align-items: center;
+}
+
+.genre-image{
+    width:110px;
+}
+
+.genre-name{
+    position: relative;
+    left:-40px;
+    background-color: #4C63AA;
+    min-width:160px ;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+.all-songs-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}

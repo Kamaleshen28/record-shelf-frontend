@@ -1,0 +1,15 @@
+
+.header{
+    background-color: #38497E;
+    color: white;
+    height:60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    font-size: x-large;
+}
+
+.record-header{
+    font-weight:bolder;
+}
