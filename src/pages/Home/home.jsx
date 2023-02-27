@@ -1,6 +1,6 @@
-import React from 'react'
-import Body from '../../components/Body/body'
-import Header from '../../components/Header/header'
+import React from 'react';
+import Body from '../../components/Body/body';
+import Header from '../../components/Header/header';
 
 export default function Home() {
     return(
@@ -8,5 +8,5 @@ export default function Home() {
             <Header />
             <Body />
         </div>
-    )
+    );
 }

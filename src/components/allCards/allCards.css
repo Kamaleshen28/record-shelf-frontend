@@ -17,10 +17,14 @@
     padding-right: 30px;
     }
   }
-@media only screen and (max-width: 413px) {  
+@media only screen and (max-width: 530px) {  
     .body-dummy { 
     padding-left: 0px;
     padding-right: 0px;
+    }
+    .cards-container{
+        display: flex;
+        justify-content: center;
     }
   }
   

@@ -1,6 +1,6 @@
-import React from 'react'
-import AllCards from '../../components/allCards/allCards'
-import Header from '../../components/Header/header'
+import React from 'react';
+import AllCards from '../../components/allCards/allCards';
+import Header from '../../components/Header/header';
 
 export default function AllSongs(){
 
@@ -9,5 +9,5 @@ export default function AllSongs(){
             <Header />
             <AllCards />
         </div>
-    )
+    );
 }

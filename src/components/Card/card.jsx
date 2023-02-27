@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import './card.css'
-import heartRed from '../../assets/heart-red.svg'
-import heartGray from '../../assets/heart-gray.svg'
-import axios from 'axios'
+import React, { useEffect, useState } from 'react';
+import './card.css';
+import heartRed from '../../assets/heart-red.svg';
+import heartGray from '../../assets/heart-gray.svg';
+import axios from 'axios';
+import PropTypes from 'prop-types';
 
 export default function Card (props) {
 
@@ -10,44 +11,45 @@ export default function Card (props) {
     const [count, setCount] = useState();
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        fetchData();
+    }, []);
     const fetchData =  async() => {
         const songData = await axios.get(`http://localhost:8080/api/records/${props.id}/likes`, {
             headers: {
-              'Authorization': 'Basic QWlzaHdhcnlhIE4='
+                'Authorization': 'Basic QWlzaHdhcnlhIE4='
             }
-        })
-        setLike(songData.data.data.like)
-        setCount(songData.data.data.count)
-    }
+        });
+        setLike(songData.data.data.like);
+        setCount(songData.data.data.count);
+    };
 
     const updateLikeCount = async (data) => {
         const config = {
             method: 'patch',
             url: `http://localhost:8080/api/records/${props.id}/likes`,
             headers: { 
-              'Authorization': 'Bearer QWlzaHdhcnlhIE4=', 
-              'Content-Type': 'application/json'
+                'Authorization': 'Bearer QWlzaHdhcnlhIE4=', 
+                'Content-Type': 'application/json'
             },
             data : data
         };
-        const response = await axios(config)
-        setCount(response.data.data.count)
-    }
+        const response = await axios(config);
+
+        setCount(response.data.data.count);
+    };
 
     const onHeartClickHandler = () => {
         setLike(previousValue => {
             if(previousValue){
-                const data = JSON.stringify({"like": !previousValue})
-                updateLikeCount(data)
+                const data = JSON.stringify({'like': !previousValue});
+                updateLikeCount(data);
             }else{
-                const data = JSON.stringify({"like": !previousValue})
-                updateLikeCount(data)
+                const data = JSON.stringify({'like': !previousValue});
+                updateLikeCount(data);
             }
             return !previousValue;
-        })
-    }
+        });
+    };
     
     return(
         <div className={(props.lightCard)? 'card light-card': 'card dark-card'}>
@@ -60,10 +62,18 @@ export default function Card (props) {
                     <a className='song-genre-text'>{props.genre.name}</a>
                 </div>
                 <div className='heart-image-container'>
-                    <img className='heart-image' onClick={onHeartClickHandler} src={like? heartRed: heartGray} alt='Not Found' />
-                    <a className='count-text' onClick={onHeartClickHandler} >{count}</a>
+                    <img data-testid='heart-image' className='heart-image' onClick={onHeartClickHandler} src={like? heartRed: heartGray} alt='Not Found' />
+                    <a className='count-text' onClick={onHeartClickHandler} data-testid='like-count' >{count}</a>
                 </div>
             </div>
         </div>
-    )
+    );
 }
+
+Card.propTypes = {
+    id:PropTypes.string.isRequired,
+    lightCard:PropTypes.bool.isRequired,
+    imageUrl:PropTypes.string.isRequired,
+    name:PropTypes.string.isRequired,
+    genre:PropTypes.object.isRequired,
+};

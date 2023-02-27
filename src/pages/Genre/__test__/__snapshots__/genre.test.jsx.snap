@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allSongs should render allSongs correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="header"
+    >
+      <p>
+        My 
+        <span
+          class="record-header"
+        >
+          Record
+        </span>
+         Shelf
+      </p>
+    </div>
+    <div
+      class="body-dummy"
+    >
+      <div
+        class="body-all-songs"
+      >
+        <div>
+          <div
+            class="body-header"
+          >
+            <p
+              class="all-songs-text"
+            >
+              genres
+            </p>
+            <img
+              alt="Not Found"
+              class="grid-icon"
+              data-testid="grid-toggle-icon"
+              src="icon-grid.svg"
+            />
+          </div>
+          <div
+            class="all-genre"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

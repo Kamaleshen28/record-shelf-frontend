@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allSongs should render allSongs correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="header"
+    >
+      <p>
+        My 
+        <span
+          class="record-header"
+        >
+          Record
+        </span>
+         Shelf
+      </p>
+    </div>
+    <div
+      class="body-content"
+    >
+      <div
+        class="body-content-container"
+      >
+        <p>
+          :((
+        </p>
+        <p>
+          seems a bit empty in here..
+        </p>
+      </div>
+      <div
+        class="button-container"
+      >
+        <button
+          class="sync-button"
+          data-testid="sync-button"
+        >
+          sync
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

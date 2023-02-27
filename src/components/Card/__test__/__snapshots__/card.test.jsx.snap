@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card should render card correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card dark-card"
+  >
+    <div
+      class="card-image-container"
+    >
+      <img
+        alt="Not Found"
+        class="card-image"
+        src="https://i.scdn.co/image/ab67616d0000b27386a8ab515de4b7aef28cd631"
+      />
+    </div>
+    <div
+      class="details-container"
+    >
+      <div
+        class="text-container"
+      >
+        <a
+          class="song-name-text"
+        >
+          Beautiful Mistakes (feat. Megan Thee Stallion)
+        </a>
+        <a
+          class="song-genre-text"
+        >
+          Pop
+        </a>
+      </div>
+      <div
+        class="heart-image-container"
+      >
+        <img
+          alt="Not Found"
+          class="heart-image"
+          data-testid="heart-image"
+          src="heart-gray.svg"
+        />
+        <a
+          class="count-text"
+          data-testid="like-count"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

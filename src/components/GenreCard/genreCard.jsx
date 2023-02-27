@@ -1,13 +1,14 @@
-import React from 'react'
-import Card from '../Card/card'
-import './genereCard.css'
+import React from 'react';
+import Card from '../Card/card';
+import './genereCard.css';
+import PropTypes from 'prop-types';
 
 export default function GenreCard({songs}){
     
     const genreName = (songs[0].genre.name).toLowerCase();
     const renderAllSongs = songs.map((song) => {
-        return (<Card key={song.id} {...song}/>)
-    })
+        return (<Card key={song.id} {...song}/>);
+    });
 
     return(
         <div className='genre-all-song-container'>
@@ -19,5 +20,9 @@ export default function GenreCard({songs}){
                 {renderAllSongs}
             </div>
         </div>
-    )
+    );
 }
+
+GenreCard.propTypes = {
+    songs:PropTypes.array.isRequired
+};
