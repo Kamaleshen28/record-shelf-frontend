@@ -4,6 +4,7 @@ import GenreCard from '../GenreCard/genreCard';
 import './allGenre.css';
 import iconGrid from '../../assets/icon-grid.svg';
 import { useNavigate } from 'react-router-dom';
+import { BACKEND_URL } from '../../constants/apiEndPoints';
 
 
 export default function AllGenre (){
@@ -12,7 +13,7 @@ export default function AllGenre (){
     const navigate = useNavigate();
 
     const fetchData =  async() => {
-        const songData = await axios.get('http://localhost:8080/api/records', {
+        const songData = await axios.get(`${BACKEND_URL}api/records`, {
             headers: {
                 'Authorization': 'Basic QWlzaHdhcnlhIE4='
             }

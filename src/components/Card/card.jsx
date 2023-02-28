@@ -4,6 +4,7 @@ import heartRed from '../../assets/heart-red.svg';
 import heartGray from '../../assets/heart-gray.svg';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { BACKEND_URL } from '../../constants/apiEndPoints';
 
 export default function Card (props) {
 
@@ -14,7 +15,7 @@ export default function Card (props) {
         fetchData();
     }, []);
     const fetchData =  async() => {
-        const songData = await axios.get(`http://localhost:8080/api/records/${props.id}/likes`, {
+        const songData = await axios.get(`${BACKEND_URL}api/records/${props.id}/likes`, {
             headers: {
                 'Authorization': 'Basic QWlzaHdhcnlhIE4='
             }
@@ -26,7 +27,7 @@ export default function Card (props) {
     const updateLikeCount = async (data) => {
         const config = {
             method: 'patch',
-            url: `http://localhost:8080/api/records/${props.id}/likes`,
+            url: `${BACKEND_URL}api/records/${props.id}/likes`,
             headers: { 
                 'Authorization': 'Bearer QWlzaHdhcnlhIE4=', 
                 'Content-Type': 'application/json'

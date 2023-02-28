@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import Card from '../Card/card';
 import iconGenre from '../../assets/icon-genre.svg';
 import './allCards.css';
 import { useNavigate } from 'react-router-dom';
+import { BACKEND_URL } from '../../constants/apiEndPoints';
+import { recordShelfContext } from '../../context/recordShelfContext';
 
 export default function AllCards(){
 
-    const [songData, setSongData] = useState([]);
+    // const [songData, setSongData] = useState([]);
+    const {songData, setSongData} = useContext(recordShelfContext);
     const navigate = useNavigate();
 
     const fetchData =  async() => {
-        const songData = await axios.get('http://localhost:8080/api/records', {
+        const songData = await axios.get(`${BACKEND_URL}api/records`, {
             headers: {
                 'Authorization': 'Basic QWlzaHdhcnlhIE4='
             }

@@ -64,3 +64,6 @@ describe('allCards', () => {
         expect(navigateFn).toBeCalledWith('/genre');
     });
 });
+
+
+
